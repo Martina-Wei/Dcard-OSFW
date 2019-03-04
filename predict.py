@@ -1,7 +1,7 @@
 import sys
 import os
 import shutil 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+# os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 from PIL import ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 import argparse
