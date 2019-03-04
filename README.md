@@ -30,7 +30,7 @@ python3 preprocess.py
   --des_path <目標位置>
   [--action split_data] 
 ```
-執行結束之後會再<目標位置>出現train以及valid兩個資料夾
+執行結束之後會在<目標位置>出現train以及valid兩個資料夾
 ###  Train
 利用分好的資料訓練模型 \
 訓練時會經過兩階段訓練，首先將pretrain model固定weights之後訓練 \
