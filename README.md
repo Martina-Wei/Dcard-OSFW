@@ -17,6 +17,11 @@ Only Sex For Work : Sex Post Image Classification
 * 在越多資料加入之後可獲得改進
 
 # Usage
+### Install
+```
+pip3 install -r requirements.txt
+```
+
 ###  Preprocess
 此步驟將資料分成訓練資料(Training dataset)以及驗證資料(Validation dataset)
 ```
