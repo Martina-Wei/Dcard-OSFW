@@ -17,6 +17,11 @@ Only Sex For Work : Sex Post Image Classification
 * 在越多資料加入之後可獲得改進
 
 # Usage
+### Install
+```
+pip3 install -r requirements.txt
+```
+
 ###  Preprocess
 此步驟將資料分成訓練資料(Training dataset)以及驗證資料(Validation dataset)
 ```
@@ -53,7 +58,7 @@ python3 evaluate.py
   [--workers 16]
 ```
 ###  Predict
-將尚未分類的圖片經過分類器之後自動擺到對應的資料夾中
+將尚未分類的圖片經過分類器之後自動擺到對應的資料夾中 \
 “打開它，機器就會幫你分好，多棒”
 ```
 python3 predict.py
