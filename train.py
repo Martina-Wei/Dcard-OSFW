@@ -1,8 +1,7 @@
 import sys
 import os
 # os.environ["CUDA_VISIBLE_DEVICES"] = "1"
-from PIL import ImageFile
-ImageFile.LOAD_TRUNCATED_IMAGES = True
+# from PIL import Image
 import argparse
 import numpy as np
 import tensorflow as tf
@@ -15,28 +14,29 @@ from tensorflow.keras.callbacks import ModelCheckpoint
 
 def train(args):
     
-    print('prepare datagen before fine tune')
-    train_datagen, valid_datagen = get_dataflow(args.dir_path, args.batch_size_1)
-    
-    print('getting model')
-    mymodel = MyModel()
-    
-    print('fix base model')
-    for layer in mymodel.base_model.layers:
-        layer.trainable = False
-    
-    print('compile model')
-    opt = Adam(lr=args.lr_1)
-    mckpt = ModelCheckpoint('model_fix_base.h5', monitor='val_loss', save_best_only=True, save_weights_only=True)
-    mymodel.model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])
-    
-    mymodel.model.fit_generator(train_datagen, 
-                    epochs=args.epochs_1, 
-                    class_weight='auto',
-                    validation_data=valid_datagen, 
-                    use_multiprocessing=True, 
-                    callbacks=[mckpt],
-                    workers=args.workers)
+    if not args.skip_step_1:
+        print('prepare datagen before fine tune')
+        train_datagen, valid_datagen = get_dataflow(args.dir_path, args.batch_size_1)
+
+        print('getting model')
+        mymodel = MyModel()
+
+        print('fix base model')
+        for layer in mymodel.base_model.layers:
+            layer.trainable = False
+
+        print('compile model')
+        opt = Adam(lr=args.lr_1)
+        mckpt = ModelCheckpoint('model_fix_base.h5', monitor='val_loss', save_best_only=True, save_weights_only=True)
+        mymodel.model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])
+
+        mymodel.model.fit_generator(train_datagen, 
+                        epochs=args.epochs_1, 
+                        class_weight='auto',
+                        validation_data=valid_datagen, 
+                        use_multiprocessing=True, 
+                        callbacks=[mckpt],
+                        workers=args.workers)
     
     
     print('evaluate best model before fine tune')
@@ -79,6 +79,7 @@ if __name__ == '__main__':
     PARSER.add_argument('--epochs_1', help='epochs before fine tune', default=5, type=int)
     PARSER.add_argument('--epochs_2', help='epochs at fine tune', default=20, type=int)
     PARSER.add_argument('--workers', help='multiprocessing workers num', default=16, type=int)
+    PARSER.add_argument('--skip_step_1', help='skip step 1', default=False, type=bool)
     
     ARGS = PARSER.parse_args()
     
