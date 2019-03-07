@@ -46,6 +46,7 @@ python3 train.py
   [--epochs_1 5]
   [--epochs_2 20]
   [--workers 16]
+  [--skip_step_1 False]
 ```
 ###  Evaluation
 評估model的準確率
