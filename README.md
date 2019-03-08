@@ -15,7 +15,7 @@ Only Sex For Work : Sex Post Image Classification
 * 使用Transfer Learning並且用Nasnet進行fine tune
 * 準確率目前為Training 98%, Testing 83%. 有overfit以及data imbalance情形發生.
 * 在越多資料加入之後可獲得改進
-* <img src="https://github.com/Dcard/Dcard-OSFW/blob/master/confuse.png?raw=true" width="50%" align=center />
+* <img src="https://github.com/Dcard/Dcard-OSFW/blob/master/confuse.png?raw=true" width="75%" align=center />
 # Usage
 ### Install
 ```
