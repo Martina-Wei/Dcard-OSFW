@@ -18,7 +18,7 @@ Only Sex For Work : Sex Post Image Classification
 * Confuse Matrix
 * <img src="https://github.com/Dcard/Dcard-OSFW/blob/master/confuse.png?raw=true" width="75%" align=center />
 * Classification Report
-* <img src="https://github.com/Dcard/Dcard-OSFW/blob/master/report.png?raw=true" width="75%" align=center />
+* <img src="https://github.com/Dcard/Dcard-OSFW/blob/master/report.png?raw=true" width="50%" align=center />
 # Usage
 ### Install
 ```
