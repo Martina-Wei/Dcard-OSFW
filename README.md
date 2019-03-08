@@ -15,22 +15,10 @@ Only Sex For Work : Sex Post Image Classification
 * 使用Transfer Learning並且用Nasnet進行fine tune
 * 準確率目前為Training 98%, Testing 83%. 有overfit以及data imbalance情形發生.
 * 在越多資料加入之後可獲得改進
+* Confuse Matrix
 * <img src="https://github.com/Dcard/Dcard-OSFW/blob/master/confuse.png?raw=true" width="75%" align=center />
 * Classification Report
-
-precision    recall  f1-score   support \
-
-   NSF_other       0.72      0.59      0.65       228 \
-    SF_other       0.85      0.96      0.90      1113 \
-      SF_sex       0.82      0.84      0.83      1169 \
-        cock       0.93      0.88      0.91       466 \
-     nipples       0.77      0.64      0.70       283 \
-       pussy       0.81      0.51      0.63       151 \
-
-   micro avg       0.83      0.83      0.83      3410 \
-   macro avg       0.81      0.74      0.77      3410 \
-weighted avg       0.83      0.83      0.83      3410 \
-
+* <img src="https://github.com/Dcard/Dcard-OSFW/blob/master/report.png?raw=true" width="75%" align=center />
 # Usage
 ### Install
 ```
