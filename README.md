@@ -13,7 +13,7 @@ Only Sex For Work : Sex Post Image Classification
   
 * 目前將密集恐懼症(trypo)以及昆蟲(bugs)等類別拿掉，由於資料過少的關係，在訓練之前請先從dataset內移出
 * 使用Transfer Learning並且用Nasnet進行fine tune
-* 準確率目前為Training 98%, Testing 78%. 有overfit以及data imbalance情形發生.
+* 準確率目前為Training 98%, Testing 83%. 有overfit以及data imbalance情形發生.
 * 在越多資料加入之後可獲得改進
 
 # Usage
