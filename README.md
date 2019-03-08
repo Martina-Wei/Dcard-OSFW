@@ -4,18 +4,21 @@ Only Sex For Work : Sex Post Image Classification
 
 # Notes
 * 在訓練資料裡面我們分成六類
-  *  全部版都不可以(NSF_other)
-  *  全部版都可以(SF_other)
-  *  西斯版可以(SF_sex)
-  *  女生殖器(pussy)
-  *  男生殖器(cock)
-  *  乳頭(nipple)
+  *  全部版都不可以(NSF_other, 2044張)
+  *  全部版都可以(SF_other, 10021張)
+  *  西斯版可以(SF_sex, 10503張)
+  *  女生殖器(pussy, 1355張)
+  *  男生殖器(cock, 4190張)
+  *  乳頭(nipple, 2546張)
   
 * 目前將密集恐懼症(trypo)以及昆蟲(bugs)等類別拿掉，由於資料過少的關係，在訓練之前請先從dataset內移出
 * 使用Transfer Learning並且用Nasnet進行fine tune
 * 準確率目前為Training 98%, Testing 83%. 有overfit以及data imbalance情形發生.
 * 在越多資料加入之後可獲得改進
-
+* Confuse Matrix
+* <img src="https://github.com/Dcard/Dcard-OSFW/blob/master/confuse.png?raw=true" width="75%" align=center />
+* Classification Report
+* <img src="https://github.com/Dcard/Dcard-OSFW/blob/master/report.png?raw=true" width="75%" align=center />
 # Usage
 ### Install
 ```
